@@ -1,0 +1,27 @@
+{% extends 'overview/base.html' %}
+
+{% block content %}
+<div class="text-center">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 my-auto" >
+                <h1>Overview of methods</h1>
+                <p>
+                    <div>
+                        Generative adversial networks (in short GANs) is class of neural network architectures composed to achieve
+                        the best state of art results in generating new data that maintains statistics of a training dataset. The model in basic
+                        version consists of two networks called generator and discriminator. They play zero-sum game where discriminator is
+                        trained to distinguish between real data from dataset and fake from generator and generator is trained to maximize
+                        loss of a discriminator.      
+
+                    </div>
+                </p>
+            </div>
+            <div class ="col-md-6-my-auto">
+                <img src="https://miro.medium.com/max/900/1*TKr1dtcNgJCA8uYY1OhmSg.png"  class="img-fluid">
+            </div>
+        </div> 
+    </div>  
+</div>
+
+{% endblock %}

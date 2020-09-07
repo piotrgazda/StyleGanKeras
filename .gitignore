@@ -1,0 +1,12 @@
+*cache*
+*.png
+*.hdf5*
+/.vscode/*
+/.idea/*
+checkpoint
+*.tfrecords*
+*checkpoint`
+/logs/*
+*.h5*
+*.npy*
+*.pkl*

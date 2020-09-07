@@ -1,0 +1,32 @@
+{% extends 'overview/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="mt-4"/>
+<div class="text-center">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 my-auto" >
+                <h1>Truncation trick</h1>
+                <p>
+                    <div>
+                        It's method that helps achiving better results at the cost of diversity. It takes style (input) and makes it closer to the
+                        average style. Consequence of that is getting faces that are more similar to average and represented in the best way face in
+                        training data.
+                    </div>
+                </p>
+            </div>
+             <div class ="col-md-3 my-auto">
+                <form  method="POST">
+                    {% csrf_token %}
+                    {{form | crispy}}
+                    <button type="submit" class="btn btn-primary" style="margin-top: 20px;" >Generate Image!</button>
+                </form>
+
+            </div>
+            <div class ="col-md-6 my-auto">
+                <img src="{{ MEDIA_URL }}{{image_url}}" class="img-fluid"/>
+            </div>
+        </div> 
+    </div>  
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'overview/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="mt-4"/>
+<div class="text-center">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 my-auto" >
+                <h1>Style mixing</h1>
+                <p>
+                    <div>
+                        It's operation that is unique to this implementation of generator. It takes styles two different faces and mixes them at 
+                        different stage of output synthesis. (for example at 8x8 or 32x32)
+                    </div>
+                </p>
+            </div>
+             <div class ="col-md-3 my-auto">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form | crispy}}
+                    <button type="submit" class="btn btn-primary" style="margin-top: 20px;" >Generate Image!</button>
+                </form>
+
+            </div>
+            <div class ="col-md-6 my-auto">
+                <img src="{{ MEDIA_URL }}{{image_url}}" class="img-fluid"/>
+            </div>
+        </div> 
+    </div>  
+</div>
+
+{% endblock %}
